@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de fiscalización tributaria — Caso de estudio · Valentina Visciglio</title>
+<meta name="description" content="Caso de estudio: diseño del sistema de fiscalización tributaria para el sector público. Design system, UX research, interfaces y testing. Por Valentina Visciglio.">
+<meta name="theme-color" content="#1B1813">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sistema de fiscalización tributaria — Caso de estudio">
+<meta property="og:description" content="Design system, UX research, interfaces y testing para un sistema de fiscalización del sector público.">
+<meta property="og:image" content="assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#caso" class="skip">Saltar al contenido</a>
+
+<div class="glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="cursor" id="cursor"><span class="cursor__label">Ver</span></div>
+
+<header class="bar scrolled" id="bar">
+  <div class="bar__inner">
+    <a href="index.html" class="bar__name" data-link><b>Valentina</b> Visciglio</a>
+    <nav class="bar__nav">
+      <a href="index.html#trabajo" data-link class="magnetic">Trabajo</a>
+      <a href="index.html#sobre" data-link class="magnetic">Sobre mí</a>
+      <a href="index.html#capacidades" data-link class="magnetic">Capacidades</a>
+      <a href="index.html#contacto" data-link class="magnetic">Contacto</a>
+    </nav>
+    <div class="bar__right">
+      <span class="bar__loc">Mendoza · AR</span>
+      <a class="btn-cv magnetic" href="assets/cv.pdf" download data-link>CV <span class="dl">↓</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="case" id="caso">
+  <div class="wrap">
+
+    <a href="index.html#trabajo" class="case-back" data-link><span class="ar">←</span> Volver al inicio</a>
+
+    <div class="case-hero">
+      <div class="case-hero__meta reveal"><span class="pn">01</span><span class="pc">Liveware · Epidata — Sector público · 2023–Actualidad</span></div>
+      <h1 class="reveal">Sistema de fiscalización tributaria</h1>
+      <p class="case-hero__lede reveal">Diseño integral del sistema con el que el Estado gestiona y fiscaliza expedientes tributarios: desde el design system hasta las interfaces y el testeo de componentes. Un primer MVP ya entregado y una segunda versión en curso.</p>
+
+      <dl class="case-facts reveal">
+        <div class="case-fact"><dt>Rol</dt><dd>UX/UI · Design System</dd></div>
+        <div class="case-fact"><dt>Cliente</dt><dd>Organismo público</dd></div>
+        <div class="case-fact"><dt>Año</dt><dd>2023 — Actualidad</dd></div>
+        <div class="case-fact"><dt>Equipo</dt><dd>Producto + Desarrollo (Scrum)</dd></div>
+      </dl>
+
+      <div class="imgslot cover reveal">Imagen de portada — reemplazar por una captura clave del sistema (≈1600×850)</div>
+    </div>
+
+    <!-- 01 contexto -->
+    <section class="case-block">
+      <div class="case-block__grid">
+        <div class="reveal">
+          <div class="case-step">01 · Contexto</div>
+          <h2>El desafío</h2>
+          <p>Fiscalizar implica manejar grandes volúmenes de expedientes, estados y trámites regidos por reglas complejas. El equipo necesitaba una plataforma <b>clara, consistente y escalable</b>, capaz de ordenar la información sin sacrificar la profundidad que requiere el trabajo del organismo.</p>
+          <p>Mi rol fue diseñar el sistema de punta a punta y construir las bases visuales y de interacción que el producto podría reutilizar a medida que creciera.</p>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot tall">Contexto / pantalla actual — reemplazar</div></div>
+      </div>
+    </section>
+
+    <!-- 02 research -->
+    <section class="case-block">
+      <div class="case-block__grid flip">
+        <div class="reveal">
+          <div class="case-step">02 · UX Research</div>
+          <h2>Entender antes de diseñar</h2>
+          <p>Antes de proponer pantallas, trabajé con el equipo para mapear el problema real: qué hace cada perfil, qué información necesita y dónde se traba el flujo hoy.</p>
+          <ul>
+            <li>Análisis de funcionalidades y casos de uso</li>
+            <li>Mapas de flujo de los trámites</li>
+            <li>Detección de patrones repetidos para sistematizar</li>
+            <li>Definición de prioridades del MVP</li>
+          </ul>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot tall">Artefactos de research — flujos, mapas (reemplazar)</div></div>
+      </div>
+    </section>
+
+    <!-- 03 definicion -->
+    <section class="case-block">
+      <div class="case-block__grid">
+        <div class="reveal">
+          <div class="case-step">03 · Definición</div>
+          <h2>Ordenar la complejidad</h2>
+          <p>Con los hallazgos definí la <b>arquitectura de información</b> y la navegación: cómo se agrupan los expedientes, qué jerarquía siguen los datos y cómo se mueve el usuario entre tareas sin perder contexto.</p>
+          <p>El objetivo era que la complejidad del dominio no se trasladara a la interfaz.</p>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot tall">Arquitectura / mapa de navegación — reemplazar</div></div>
+      </div>
+    </section>
+
+    <!-- 04 wireframes -->
+    <section class="case-block">
+      <div class="case-block__grid flip">
+        <div class="reveal">
+          <div class="case-step">04 · Wireframes</div>
+          <h2>De lo abstracto a lo concreto</h2>
+          <p>Bajé la estructura a wireframes de baja y alta fidelidad para validar el esqueleto de cada pantalla <b>antes</b> de entrar en el detalle visual. Iterar en gris es rápido y barato.</p>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot tall">Wireframes lo-fi / hi-fi — reemplazar</div></div>
+      </div>
+    </section>
+
+    <!-- 05 design system -->
+    <section class="case-block">
+      <div class="case-block__grid">
+        <div class="reveal">
+          <div class="case-step">05 · UI &amp; Design System</div>
+          <h2>Un sistema, no pantallas sueltas</h2>
+          <p>Construí el <b>design system</b>: componentes, tokens y patrones reutilizables que garantizan consistencia y aceleran el diseño de nuevas pantallas. Sobre esa base diseñé las interfaces finales.</p>
+          <p>Pensado para el handoff con desarrollo: cada componente documentado, con sus estados y reglas de uso.</p>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot wide">Design system — componentes, tokens, UI final (reemplazar)</div></div>
+      </div>
+    </section>
+
+    <!-- 06 testing -->
+    <section class="case-block">
+      <div class="case-block__grid flip">
+        <div class="reveal">
+          <div class="case-step">06 · Testing</div>
+          <h2>Validar y iterar</h2>
+          <p>Testeé los componentes junto al equipo, ajustando detalles de interacción y consistencia antes de cada entrega. El sistema se refina iteración a iteración.</p>
+        </div>
+        <div class="case-block__media reveal"><div class="imgslot tall">Testing / antes y después — reemplazar</div></div>
+      </div>
+    </section>
+
+    <!-- resultados -->
+    <section class="case-block">
+      <div class="reveal">
+        <div class="case-step">Resultados</div>
+        <h2>Qué cambió</h2>
+        <p>El <b>primer MVP fue entregado</b> y hoy trabajamos en la segunda versión, ampliando el sistema con nuevos módulos. El design system quedó como base de consulta y reutilización para todo el equipo.</p>
+        <dl class="case-metrics">
+          <div class="case-metric"><div class="mv">—</div><div class="ml">Reducción en tiempo de diseño de nuevas pantallas</div></div>
+          <div class="case-metric"><div class="mv">—</div><div class="ml">Componentes en el design system</div></div>
+          <div class="case-metric"><div class="mv">—</div><div class="ml">Módulos cubiertos por el sistema</div></div>
+        </dl>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="wrap">
+    <div class="case-next">
+      <span class="case-next__l">Más trabajo</span>
+      <a href="index.html#trabajo" data-link>Volver a proyectos <span class="ar">→</span></a>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
