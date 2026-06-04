@@ -18,6 +18,7 @@
       burger.setAttribute('aria-expanded', String(open));
       burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
       mnav.setAttribute('aria-hidden', String(!open));
+      document.querySelectorAll('main, .skip').forEach(el => el.toggleAttribute('inert', open));
     };
     burger.addEventListener('click', () => setMenu(!mnav.classList.contains('open')));
     mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
