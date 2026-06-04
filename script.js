@@ -7,6 +7,23 @@
   const onScroll = () => bar.classList.toggle('scrolled', window.scrollY > 40);
   onScroll();
 
+  /* ---- mobile menu ---- */
+  const burger = document.getElementById('burger');
+  const mnav = document.getElementById('mnav');
+  if (burger && mnav){
+    const setMenu = (open) => {
+      burger.classList.toggle('open', open);
+      mnav.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      mnav.setAttribute('aria-hidden', String(!open));
+    };
+    burger.addEventListener('click', () => setMenu(!mnav.classList.contains('open')));
+    mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    addEventListener('keydown', e => { if (e.key === 'Escape' && mnav.classList.contains('open')) setMenu(false); });
+  }
+
   /* ---- scroll progress ---- */
   const prog = document.getElementById('progress');
   function setProgress(){
